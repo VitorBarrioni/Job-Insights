@@ -6,7 +6,7 @@ def get_unique_industries(path: str) -> List[str]:
     industries_list = read(path)
     set_unique_industries = set()
     for industries in industries_list:
-        if industries != "":
+        if industries["industry"] != "":
             set_unique_industries.add(industries["industry"])
     return set_unique_industries
 
