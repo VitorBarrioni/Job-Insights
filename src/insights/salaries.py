@@ -28,8 +28,8 @@ def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
     try:
         min_salary = int(job["min_salary"])
         max_salary = int(job["max_salary"])
-        salary = int(salary)
-    except (TypeError, ValueError):
+        salary = int((salary))
+    except (TypeError, ValueError, KeyError):
         raise ValueError
     if min_salary > max_salary:
         raise ValueError
